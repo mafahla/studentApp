@@ -42,6 +42,8 @@
 
     </table>
 </div>
+
+
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -50,31 +52,31 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
+            <form [formGroup]="studentValue">
                 <div class="mb-3">
                   <label for="txtName" class="form-label">Student Name</label>
-                  <input type="Name" class="form-control" id="txtName" placeholder="Enter Student Name">
+                  <input type="text" formControlName="name" class="form-control" id="txtName" placeholder="Enter Student Name">
                 </div>
                 <div class="mb-3">
                     <label for="txtEmail" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="txtEmail" placeholder="Enter Student Email">
+                    <input type="text" formControlName="email" class="form-control" id="txtEmail" placeholder="Enter Student Email">
                   </div>
                   <div class="mb-3">
                     <label for="txtPhone" class="form-label">Phone Number</label>
                     <div class="input-group">
                         <div class="input-group-text">+27</div>
-                    <input type="phone" class="form-control" id="txtphone" placeholder="Enter Student Phone Number">
+                    <input type="text" formControlName="phone" class="form-control" id="txtphone" placeholder="Enter Student Phone Number">
                   </div>
                   </div>
                   <div class="mb-3">
                     <label for="txtClass" class="form-label">Course</label>
-                    <input type="Class" class="form-control" id="txtclass" placeholder="Enter Student Class">
+                    <input type="text" formControlName="class" class="form-control" id="txtclass" placeholder="Enter Student Class">
                   </div>
                 </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" (click)="addStudent()">Submit</button>
         </div>
       </div>
     </div>
