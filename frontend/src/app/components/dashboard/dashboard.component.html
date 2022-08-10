@@ -11,15 +11,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto@gmail</td>
-                <td>0607944512</td>
-                <td>Software</td>
+            <tr *ngFor="let student of studentList">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.phone}}</td>
+                <td>{{student.class}}</td>
                 <td>
-                    <input type="button" value="Edit" class="btn btn-success me-2">
-                    <input type="button" value="Delete" class="btn btn-danger">
+                    <input type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="Edit" (click)="editStudent(student)" class="btn btn-success me-2">
+                     <input type="button" value="Delete" (click)="deleteStudent(student)" class="btn btn-danger">
                 </td>
             </tr>
             <tr>
@@ -36,7 +36,7 @@
             <tr>
                 <th scope="row">3</th>
                 <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td>@twitter</td> 
             </tr>
         </tbody>
 
@@ -76,7 +76,9 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="addStudent()">Submit</button>
+          <button type="button" class="btn btn-primary" *ngIf="btnSaveShow" (click)="addStudent()">Submit</button>
+          <button type="button" class="btn btn-primary" *ngIf="btnUpdateShow" (click)="updateStudent()">Submit</button>
+        
         </div>
       </div>
     </div>

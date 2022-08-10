@@ -1,0 +1,28 @@
+{
+  "post": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "IhVmbO7",
+      "name": "byt",
+      "email": "byh6r",
+      "phone": "yntbgf",
+      "class": "ytbg"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "same comment",
+      "postId": "1"
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ]
+}
