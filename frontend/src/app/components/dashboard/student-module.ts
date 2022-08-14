@@ -1,5 +1,5 @@
 export class studentModel{
-    id?:number = 0;
+    id?:number;
     name?:string = "";
     class?:string;
     email?:string;

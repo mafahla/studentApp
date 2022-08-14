@@ -22,22 +22,7 @@
                      <input type="button" value="Delete" (click)="deleteStudent(student)" class="btn btn-danger">
                 </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Software</td>
-                <td>
-                    <input type="button" value="Edit" class="btn btn-success me-2">
-                    <input type="button" value="Delete" class="btn btn-danger">
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td> 
-            </tr>
+            
         </tbody>
 
     </table>
@@ -76,8 +61,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" *ngIf="btnSaveShow" (click)="addStudent()">Submit</button>
-          <button type="button" class="btn btn-primary" *ngIf="btnUpdateShow" (click)="updateStudent()">Submit</button>
+          <button type="button" class="btn btn-primary" *ngIf="btnSaveShow" (click)="addStudent()">Save</button>
+          <button type="button" class="btn btn-primary" *ngIf="btnUpdateShow" (click)="updateStudent()">update</button>
         
         </div>
       </div>
